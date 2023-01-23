@@ -18,7 +18,7 @@ namespace WebRickAndMorty.Controllers
         }
 
         // GET: api/<RickMortyController>
-        [HttpGet("/test")]
+        [HttpGet("/getCharacters")]
         public async Task<Root> Get()
         {
             var result = await _rickMorty.GetAllCharacter();

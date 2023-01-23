@@ -14,7 +14,6 @@ namespace WebRickAndMorty.Service
             HttpResponseMessage response = await client.GetAsync(url);
             response.EnsureSuccessStatusCode();
             var result = await response.Content.ReadAsStringAsync();
-            //var characters2 = JsonSerializer.Deserialize<Root>(result);
             var characters = JsonSerializer.Deserialize<Root>(result);
             return characters;
         }
@@ -22,9 +21,6 @@ namespace WebRickAndMorty.Service
         
 
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-
-
-
 
     }
 }
